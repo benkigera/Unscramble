@@ -99,7 +99,13 @@ class GameFragment : Fragment() {
      */
     private fun onSkipWord() {
 
-        updateNextWordOnScreen()
+        if (viewModel.nextWord()) {
+            setErrorTextField(false)
+            updateNextWordOnScreen()
+        } else {
+            showFinalScoreDialog()
+        }
+
     }
 
     /*
