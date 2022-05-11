@@ -16,6 +16,7 @@
 
 package com.example.android.unscramble.ui.game
 
+import GameViewModel
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -67,6 +68,7 @@ class GameFragment : Fragment() {
         binding.wordCount.text = getString(
             R.string.word_count, 0, MAX_NO_OF_WORDS
         )
+
     }
 
     /*
